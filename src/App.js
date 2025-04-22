@@ -62,7 +62,7 @@ const App = () => {
     <div className="dashboard">
       <header>
         <div className="company-info">
-          <img src="/logo.png" alt="Logo" />
+          <img src="/favicon.ico" alt="Logo" />
           <div>
             <h1>Nano Life Science Pvt Ltd</h1>
             <p>Muthanallur Cross, Bangalore</p>
