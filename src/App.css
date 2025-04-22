@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dashboard {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #007bff;
   color: white;
+  padding: 10px;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.company-info {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.company-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.admin {
+  font-size: 18px;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.metric-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 20%;
+  margin: 10px 0;
+}
+
+.metric-card input {
+  width: 70%;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.metric-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.products-overview, .side-content {
+  width: 45%;
+}
+
+.products-overview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.products-overview th, .products-overview td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.products-overview .status {
+  font-weight: bold;
+}
+
+.status.in-stock {
+  color: green;
+}
+
+.status.out-of-stock {
+  color: red;
+}
+
+.add-product-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.add-product-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.side-content .sales-analytics {
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sales-analytics ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sales-analytics li {
+  padding: 5px 0;
+}
+
+.history-page {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 20px auto;
+}
+
+.history-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-page li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .products-overview, .side-content {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .metric-card {
+    width: 45%;
+    margin: 10px 0;
+  }
+
+  .metrics {
+    flex-direction: column;
+    align-items: center;
   }
 }
